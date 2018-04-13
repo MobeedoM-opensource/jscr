@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="JavaScriptLibraryMappings">
-    <includedPredefinedLibrary name="Node.js Core" />
-  </component>
   <component name="MongoConfiguration">
     <option name="serverConfigurations">
       <list>
@@ -17,10 +14,5 @@
       </list>
     </option>
     <option name="shellPath" value="C:\Dev\NoSql\mongodb-win32-x86_64-2.4.6\bin\mongo.exe" />
-  </component>
-  <component name="TypeScriptCompiler">
-    <option name="isCompilerEnabled" value="true" />
-    <option name="typeScriptCompilerParams" value="-t es5 -m amd --experimentalDecorators --emitDecoratorMetadata  --jsx react " />
-    <option name="useConfig" value="true" />
   </component>
 </project>
