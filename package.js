@@ -17,8 +17,10 @@ router.get('/', function (req, res, next) {
   var url = 'https://play.google.com/store/apps/details?id=' + id + '&hl=' + lang;
 
   request(url, function (error, response, body) {
-    var dto = new Object();
     const $ = cheerio.load(body);
+
+    var dto = new Object();
+    dto.apiv = '1.0';
 
     try {
       dto.appIconUrl = $('.ujDFqe').attr('src');
