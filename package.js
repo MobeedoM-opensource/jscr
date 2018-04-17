@@ -24,7 +24,7 @@ router.get('/', function (req, res, next) {
     const $ = cheerio.load(body);
 
     var dto = new Object();
-    dto.apiv = '1.0';
+    dto.apiv = '1.0.1';
 
     try {
       dto.appIconUrl = $('.ujDFqe').attr('src');
