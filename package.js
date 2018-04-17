@@ -24,7 +24,7 @@ router.get('/', function (req, res, next) {
     const $ = cheerio.load(body);
 
     var dto = new Object();
-    dto.apiv = '1.0.2';
+    dto.apiv = '1.0.3';
 
     try {
       dto.appIconUrl = $('.ujDFqe').attr('src');
@@ -59,6 +59,8 @@ router.get('/', function (req, res, next) {
       dto.softwareVersion = $('div.hAyfc:nth-child(4) > span:nth-child(2) > div:nth-child(1) > span:nth-child(1)').text();
       dto.operatingSystems = $('div.hAyfc:nth-child(5) > span:nth-child(2) > div:nth-child(1) > span:nth-child(1)').text();
       dto.contentRating = $('div.hAyfc:nth-child(6) > span:nth-child(2) > div:nth-child(1) > span:nth-child(1) > div:nth-child(1)').text();
+
+      dto.priceString = $('.HPiPcc').attr('aria-label');
 
       var hr1 = $('div.hAyfc:nth-child(10) > span:nth-child(2) > div:nth-child(1) > span:nth-child(1) > div:nth-child(1) > a:nth-child(1)').attr('href');
       if (hr1 && hr1.startsWith('http'))
